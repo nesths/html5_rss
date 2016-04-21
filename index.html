@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<title>GWC Rss Reader</title>
+
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+	
+	<!-- script src="https://cdnjs.cloudflare.com/ajax/libs/ractive/0.7.3/ractive.min.js"></script -->
+	<!-- script src="//cdn.jsdelivr.net/ractive.load/latest/ractive-load.min.js"></script -->
+	
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  	<link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+	
+	
+	    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+    
+	<script type="text/javascript" src="model.js"></script>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css">
+	<link rel="stylesheet" href="https://www.dropbox.com/s/rpv74yoiu0he3th/gwc_materializecss.css?dl=1" type="text/css" />
+
+
+<style type="text/css">
+header, main, footer {
+    padding-left: 240px;
+  }
+
+  @media only screen and (max-width : 992px) {
+    header, main, footer {
+      padding-left: 0;
+    }
+  }
+  
+  .side-nav{
+    background-color: #59B4CA;
+  }
+  
+  .brand-logo{
+    margin-top:20px;
+  }
+  
+  .itemTitle{
+    color:black;
+  }
+  
+  .itemDescription{
+    color:grey;
+  }
+  
+  .itemCard{
+    background-color: white;
+  }
+  
+  .cardImage{
+      width: auto !important; /*override the width below*/
+  width: 100%;
+  max-width: 678px;
+  float: left;
+  clear: both;
+  }
+
+
+.col {
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  min-height: 1px;
+}  
+</style>
+</head>
+
+<body>
+
+
+   <ul id="sidebar" class="side-nav fixed">
+     <li class="logo brand-logo">
+        <img src="https://girlswhocode.com/images/logo.png"></img>
+      </li>
+    </ul>
+    <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+
+  <main style="max-width:1000px">
+
+      <div class="row">
+        <h4 id='rssTitle'></h4>
+      </div>
+    
+        <div class="divider"></div>    
+    
+        <div class="row">
+        
+          <div id="rssListView"></div>
+            
+        </div>
+
+        <div class="row">
+            <div id="rssCardView" style="height:400px"></div>
+        </div>
+    </main>
+    <script src="rss.js"></script>
+    
+</body>
+
+</html>
